@@ -1,0 +1,27 @@
+# `make ci` is the whole gate for this repo: every package the metapackage names
+# exists in the archive, and the .deb it builds is clean.
+name: build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      # No compiler: this package has no payload. dpkg-dev builds it, lintian and
+      # shellcheck are the gate.
+      - name: tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends dpkg-dev lintian shellcheck
+
+      # check reads the published Packages index — there is no archive checkout
+      # here, and its db/ is not in git anyway.
+      - name: ci
+        run: make ci

@@ -1,0 +1,7 @@
+# Not a Debian upload; there is no bug tracker entry to close.
+amber-desktop: initial-upload-closes-no-bugs
+
+# No override for empty-binary-package. lintian raises it only when a package
+# is empty AND does not present itself as a metapackage, and `Section:
+# metapackages` already answers that, so the override never applied — it
+# reported as `unused-override` while reading as though something were handled.

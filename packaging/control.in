@@ -1,0 +1,37 @@
+Package: amber-desktop
+Version: @VERSION@-1
+Architecture: all
+Maintainer: Hyperquader <hyperquader@gmail.com>
+Installed-Size: @SIZE@
+Depends: ambrosia, copal, amberlin
+Recommends: amber-odin, amber-ols, kat800
+Suggests: amberlin-backend, amber-theme
+Section: metapackages
+Priority: optional
+Homepage: https://github.com/Hyperquader-Coders/amber-desktop
+Description: Amber Linux suite, in one package
+ Installs the three applications that make up Amber Linux on Linux Mint 22+:
+ Ambrosia the store the others read, Copal the notes overlay, and Amberlin
+ the launcher.
+ .
+ This package contains no files. It exists so the suite can be installed
+ and kept together with one name, and so that removing it does not remove
+ the applications — they stay until you remove them yourself.
+ .
+ kat800 is recommended rather than required. It is a terminal that happens to
+ be one of Ambrosia's first D-Bus clients, not a part of this suite, and it
+ belongs to its own project — so the suite installs it by default and works
+ without it.
+ .
+ The shared pieces come in on their own: the applications depend on
+ amber-fonts and amber-gtk4 directly, so those are not listed here. The
+ Odin compiler and its language server are recommended rather than
+ required, since running the suite does not need a toolchain. The speech
+ backend is only suggested: it needs a model set that the archive does not
+ carry.
+ .
+ The theme is suggested too, and deliberately no more than that. Amber Theme
+ recolours the whole desktop rather than only these applications, so
+ installing the suite should not repaint a system the owner did not ask to
+ have repainted. It is there to be found by anyone who wants the look the
+ applications were drawn against.

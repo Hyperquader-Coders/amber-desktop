@@ -1,0 +1,15 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: amber-desktop
+Upstream-Contact: hyperquader@gmail.com
+Source: https://github.com/Hyperquader-Coders/amber-desktop
+
+Files: *
+Copyright: Copyright (C) 2026 Andre Bremer
+License: LicenseRef-BSL
+
+License: LicenseRef-BSL
+ Business Source License (BSL). Non-commercial use, testing and evaluation are
+ granted; commercial production use and machine-learning training require a
+ separate licence. On 2033-05-01 the work becomes GPL-3.0.
+ .
+ The full text is in /usr/share/doc/amber-desktop/LICENSE.
